@@ -1,0 +1,212 @@
+{
+  "templateKey": "jewellery",
+  "templateName": "Jewellery",
+  "exportRules": {
+    "excludeUnmapped": true,
+    "requiredFieldKey": "sku",
+    "dropRowIfBlankKeys": [
+      "sku"
+    ]
+  },
+  "fields": [
+    {
+      "key": "manufacturer_name_and_address_with_pincode",
+      "label": "Manufacturer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "packer_name_and_address_with_pincode",
+      "label": "Packer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "importer_name_and_address_with_pincode",
+      "label": "Importer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "brand_name",
+      "label": "Brand Name",
+      "type": "text"
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text"
+    },
+    {
+      "key": "description",
+      "label": "Description",
+      "type": "text"
+    },
+    {
+      "key": "article_type",
+      "label": "Article Type",
+      "type": "text"
+    },
+    {
+      "key": "art_type",
+      "label": "Art Type",
+      "type": "text"
+    },
+    {
+      "key": "number_of_items",
+      "label": "Number of Items",
+      "type": "text"
+    },
+    {
+      "key": "colour",
+      "label": "Colour",
+      "type": "text"
+    },
+    {
+      "key": "size",
+      "label": "Size",
+      "type": "text"
+    },
+    {
+      "key": "style_id",
+      "label": "Style ID",
+      "type": "text"
+    },
+    {
+      "key": "sku",
+      "label": "SKU Code",
+      "type": "text"
+    },
+    {
+      "key": "ean",
+      "label": "EAN",
+      "type": "text"
+    },
+    {
+      "key": "country_of_origin",
+      "label": "Country Of Origin",
+      "type": "text"
+    },
+    {
+      "key": "gtin",
+      "label": "GTIN",
+      "type": "text"
+    },
+    {
+      "key": "hsn",
+      "label": "HSN",
+      "type": "text"
+    },
+    {
+      "key": "mrp",
+      "label": "MRP",
+      "type": "text"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "type": "text"
+    },
+    {
+      "key": "fabric",
+      "label": "Fabric",
+      "type": "text"
+    },
+    {
+      "key": "fabric_composition_in",
+      "label": "Fabric Composition in %",
+      "type": "text"
+    },
+    {
+      "key": "season",
+      "label": "Season",
+      "type": "text"
+    },
+    {
+      "key": "occasion",
+      "label": "Occasion",
+      "type": "text"
+    },
+    {
+      "key": "fashion_types",
+      "label": "Fashion Types",
+      "type": "text"
+    },
+    {
+      "key": "closure_type",
+      "label": "Closure Type",
+      "type": "text"
+    },
+    {
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
+      "type": "text"
+    },
+    {
+      "key": "pattern_type",
+      "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "lining",
+      "label": "Lining",
+      "type": "text"
+    },
+    {
+      "key": "transparency",
+      "label": "Transparency",
+      "type": "text"
+    },
+    {
+      "key": "wash_care",
+      "label": "Wash Care",
+      "type": "text"
+    },
+    {
+      "key": "stretchable",
+      "label": "Stretchable",
+      "type": "text"
+    },
+    {
+      "key": "returnable",
+      "label": "Returnable",
+      "type": "text"
+    },
+    {
+      "key": "front_image",
+      "label": "Front Image",
+      "type": "image",
+      "autoMap": "position=1"
+    },
+    {
+      "key": "back_image",
+      "label": "Back Image",
+      "type": "image",
+      "autoMap": "position=2"
+    },
+    {
+      "key": "side_image",
+      "label": "Side Image",
+      "type": "image",
+      "autoMap": "position=3"
+    },
+    {
+      "key": "detail_angle",
+      "label": "Detail Angle",
+      "type": "image",
+      "autoMap": "position=4"
+    },
+    {
+      "key": "look_shot_image",
+      "label": "Look Shot Image",
+      "type": "text"
+    },
+    {
+      "key": "lifestyle_image",
+      "label": "Lifestyle Image",
+      "type": "text"
+    },
+    {
+      "key": "size_chart_image",
+      "label": "Size Chart Image",
+      "type": "text"
+    }
+  ]
+}

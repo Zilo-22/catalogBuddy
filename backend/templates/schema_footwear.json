@@ -1,0 +1,223 @@
+{
+  "templateKey": "footwear",
+  "templateName": "Footwear",
+  "exportRules": {
+    "excludeUnmapped": true,
+    "requiredFieldKey": "sku",
+    "dropRowIfBlankKeys": [
+      "sku"
+    ]
+  },
+  "fields": [
+    {
+      "key": "manufacturer_name_and_address_with_pincode",
+      "label": "Manufacturer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "packer_name_and_address_with_pincode",
+      "label": "Packer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "importer_name_and_address_with_pincode",
+      "label": "Importer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "brand_name",
+      "label": "Brand Name",
+      "type": "text"
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text"
+    },
+    {
+      "key": "description",
+      "label": "Description",
+      "type": "text"
+    },
+    {
+      "key": "shoe_type",
+      "label": "Shoe Type",
+      "type": "text"
+    },
+    {
+      "key": "shoe_style",
+      "label": "Shoe Style",
+      "type": "text"
+    },
+    {
+      "key": "number_of_items",
+      "label": "Number of Items",
+      "type": "text"
+    },
+    {
+      "key": "colour",
+      "label": "Colour",
+      "type": "text"
+    },
+    {
+      "key": "size",
+      "label": "Size",
+      "type": "text"
+    },
+    {
+      "key": "style_id",
+      "label": "Style ID",
+      "type": "text"
+    },
+    {
+      "key": "sku",
+      "label": "SKU Code",
+      "type": "text"
+    },
+    {
+      "key": "ean",
+      "label": "EAN",
+      "type": "text"
+    },
+    {
+      "key": "country_of_origin",
+      "label": "Country Of Origin",
+      "type": "text"
+    },
+    {
+      "key": "gtin",
+      "label": "GTIN",
+      "type": "text"
+    },
+    {
+      "key": "hsn",
+      "label": "HSN",
+      "type": "text"
+    },
+    {
+      "key": "mrp",
+      "label": "MRP",
+      "type": "text"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "type": "text"
+    },
+    {
+      "key": "upper_material",
+      "label": "Upper Material",
+      "type": "text"
+    },
+    {
+      "key": "sole_material",
+      "label": "Sole Material",
+      "type": "text"
+    },
+    {
+      "key": "material_composition_in",
+      "label": "Material Composition in %",
+      "type": "text"
+    },
+    {
+      "key": "knit",
+      "label": "Knit",
+      "type": "text"
+    },
+    {
+      "key": "toe_shape",
+      "label": "Toe Shape",
+      "type": "text"
+    },
+    {
+      "key": "fastening",
+      "label": "Fastening",
+      "type": "text"
+    },
+    {
+      "key": "shoe_height",
+      "label": "Shoe Height",
+      "type": "text"
+    },
+    {
+      "key": "occasion",
+      "label": "Occasion",
+      "type": "text"
+    },
+    {
+      "key": "heel_type",
+      "label": "Heel Type",
+      "type": "text"
+    },
+    {
+      "key": "heel_height_in_inches",
+      "label": "Heel Height in Inches",
+      "type": "text"
+    },
+    {
+      "key": "pattern_type",
+      "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
+      "type": "text"
+    },
+    {
+      "key": "wash_care",
+      "label": "Wash Care",
+      "type": "text"
+    },
+    {
+      "key": "is_returnable",
+      "label": "Is Returnable",
+      "type": "text"
+    },
+    {
+      "key": "front_image",
+      "label": "Front Image",
+      "type": "image",
+      "autoMap": "position=1"
+    },
+    {
+      "key": "back_image",
+      "label": "Back Image",
+      "type": "image",
+      "autoMap": "position=2"
+    },
+    {
+      "key": "side_image",
+      "label": "Side Image",
+      "type": "image",
+      "autoMap": "position=3"
+    },
+    {
+      "key": "detail_angle",
+      "label": "Detail Angle",
+      "type": "image",
+      "autoMap": "position=4"
+    },
+    {
+      "key": "lifestyle",
+      "label": "Lifestyle",
+      "type": "image",
+      "autoMap": "position=5"
+    },
+    {
+      "key": "size_chart_image",
+      "label": "Size Chart Image",
+      "type": "text"
+    },
+    {
+      "key": "brand_size",
+      "label": "Brand Size",
+      "type": "text"
+    },
+    {
+      "key": "to_fit_foot_length_inch",
+      "label": "To Fit Foot Length (Inch)",
+      "type": "text"
+    }
+  ]
+}

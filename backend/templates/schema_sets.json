@@ -1,0 +1,357 @@
+{
+  "templateKey": "sets",
+  "templateName": "Sets",
+  "exportRules": {
+    "excludeUnmapped": true,
+    "requiredFieldKey": "sku",
+    "dropRowIfBlankKeys": [
+      "sku"
+    ]
+  },
+  "fields": [
+    {
+      "key": "manufacturer_name_and_address_with_pincode",
+      "label": "Manufacturer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "packer_name_and_address_with_pincode",
+      "label": "Packer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "importer_name_and_address_with_pincode",
+      "label": "Importer Name and Address with Pincode",
+      "type": "text"
+    },
+    {
+      "key": "brand_name",
+      "label": "Brand Name",
+      "type": "text"
+    },
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text"
+    },
+    {
+      "key": "description",
+      "label": "Description",
+      "type": "text"
+    },
+    {
+      "key": "article_type",
+      "label": "Article Type",
+      "type": "text"
+    },
+    {
+      "key": "number_of_items",
+      "label": "Number of Items",
+      "type": "text"
+    },
+    {
+      "key": "colour",
+      "label": "Colour",
+      "type": "text"
+    },
+    {
+      "key": "size",
+      "label": "Size",
+      "type": "text"
+    },
+    {
+      "key": "style_id",
+      "label": "Style ID",
+      "type": "text"
+    },
+    {
+      "key": "sku",
+      "label": "SKU Code",
+      "type": "text"
+    },
+    {
+      "key": "ean",
+      "label": "EAN",
+      "type": "text"
+    },
+    {
+      "key": "gtin",
+      "label": "GTIN",
+      "type": "text"
+    },
+    {
+      "key": "country_of_origin",
+      "label": "Country Of Origin",
+      "type": "text"
+    },
+    {
+      "key": "hsn",
+      "label": "HSN",
+      "type": "text"
+    },
+    {
+      "key": "mrp",
+      "label": "MRP",
+      "type": "text"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "type": "text"
+    },
+    {
+      "key": "knit_or_woven",
+      "label": "Knit or Woven",
+      "type": "text"
+    },
+    {
+      "key": "top_style",
+      "label": "Top Style",
+      "type": "text"
+    },
+    {
+      "key": "top_type",
+      "label": "Top Type",
+      "type": "text"
+    },
+    {
+      "key": "top_length",
+      "label": "Top Length",
+      "type": "text"
+    },
+    {
+      "key": "top_fabric",
+      "label": "Top Fabric",
+      "type": "text"
+    },
+    {
+      "key": "top_fit",
+      "label": "Top Fit",
+      "type": "text"
+    },
+    {
+      "key": "top_pattern",
+      "label": "Top Pattern",
+      "type": "text"
+    },
+    {
+      "key": "top_hemline",
+      "label": "Top Hemline",
+      "type": "text"
+    },
+    {
+      "key": "one_piece_product_length",
+      "label": "One Piece Product Length",
+      "type": "text"
+    },
+    {
+      "key": "occasion",
+      "label": "Occasion",
+      "type": "text"
+    },
+    {
+      "key": "season",
+      "label": "Season",
+      "type": "text"
+    },
+    {
+      "key": "fashion_type",
+      "label": "Fashion Type",
+      "type": "text"
+    },
+    {
+      "key": "sleeve_length",
+      "label": "Sleeve Length",
+      "type": "text"
+    },
+    {
+      "key": "sleeve_style",
+      "label": "Sleeve Style",
+      "type": "text"
+    },
+    {
+      "key": "bottom_type",
+      "label": "Bottom Type",
+      "type": "text"
+    },
+    {
+      "key": "bottom_fabric",
+      "label": "Bottom Fabric",
+      "type": "text"
+    },
+    {
+      "key": "bottom_style",
+      "label": "Bottom Style",
+      "type": "text"
+    },
+    {
+      "key": "bottom_pattern",
+      "label": "Bottom Pattern",
+      "type": "text"
+    },
+    {
+      "key": "bottom_fit",
+      "label": "Bottom Fit",
+      "type": "text"
+    },
+    {
+      "key": "with_dupatta",
+      "label": "With Dupatta",
+      "type": "text"
+    },
+    {
+      "key": "closure_type",
+      "label": "Closure Type",
+      "type": "text"
+    },
+    {
+      "key": "waist_rise",
+      "label": "Waist Rise",
+      "type": "text"
+    },
+    {
+      "key": "waistband",
+      "label": "Waistband",
+      "type": "text"
+    },
+    {
+      "key": "number_of_pockets",
+      "label": "Number of Pockets",
+      "type": "text"
+    },
+    {
+      "key": "collar_type",
+      "label": "Collar Type",
+      "type": "text"
+    },
+    {
+      "key": "neckline",
+      "label": "Neckline",
+      "type": "text"
+    },
+    {
+      "key": "pattern_type",
+      "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
+      "type": "text"
+    },
+    {
+      "key": "dupatta_fabric",
+      "label": "Dupatta Fabric",
+      "type": "text"
+    },
+    {
+      "key": "dupatta_pattern",
+      "label": "Dupatta Pattern",
+      "type": "text"
+    },
+    {
+      "key": "lining",
+      "label": "Lining",
+      "type": "text"
+    },
+    {
+      "key": "transparency",
+      "label": "Transparency",
+      "type": "text"
+    },
+    {
+      "key": "wash_care",
+      "label": "Wash Care",
+      "type": "text"
+    },
+    {
+      "key": "stretchable",
+      "label": "Stretchable",
+      "type": "text"
+    },
+    {
+      "key": "is_returnable",
+      "label": "Is Returnable",
+      "type": "text"
+    },
+    {
+      "key": "front_image",
+      "label": "Front Image",
+      "type": "image",
+      "autoMap": "position=1"
+    },
+    {
+      "key": "back_image",
+      "label": "Back Image",
+      "type": "image",
+      "autoMap": "position=2"
+    },
+    {
+      "key": "side_image",
+      "label": "Side Image",
+      "type": "image",
+      "autoMap": "position=3"
+    },
+    {
+      "key": "detail_angle",
+      "label": "Detail Angle",
+      "type": "image",
+      "autoMap": "position=4"
+    },
+    {
+      "key": "look_shot_image",
+      "label": "Look Shot Image",
+      "type": "text"
+    },
+    {
+      "key": "lifestyle_image",
+      "label": "Lifestyle Image",
+      "type": "text"
+    },
+    {
+      "key": "size_chart_image",
+      "label": "Size Chart Image",
+      "type": "text"
+    },
+    {
+      "key": "front_length_inches",
+      "label": "Front Length (Inches)",
+      "type": "text"
+    },
+    {
+      "key": "size_chest_bust",
+      "label": "Size - Chest/Bust",
+      "type": "text"
+    },
+    {
+      "key": "sleeve_length_inches",
+      "label": "Sleeve Length (inches)",
+      "type": "text"
+    },
+    {
+      "key": "across_shoulder",
+      "label": "Across Shoulder",
+      "type": "text"
+    },
+    {
+      "key": "waist_body_measurement",
+      "label": "Waist (Body Measurement)",
+      "type": "text"
+    },
+    {
+      "key": "hip_body_measurement",
+      "label": "Hip (Body Measurement)",
+      "type": "text"
+    },
+    {
+      "key": "inseam_length",
+      "label": "Inseam Length",
+      "type": "text"
+    },
+    {
+      "key": "bottom_length",
+      "label": "Bottom Length",
+      "type": "text"
+    }
+  ]
+}
