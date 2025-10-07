@@ -1,6 +1,6 @@
 {
-  "templateKey": "tops",
-  "templateName": "Tops",
+  "templateKey": "sarees_&_blouse",
+  "templateName": "Sarees & Blouse",
   "exportRules": {
     "excludeUnmapped": true,
     "requiredFieldKey": "sku",
@@ -47,6 +47,11 @@
     {
       "key": "article_type",
       "label": "Article Type",
+      "type": "text"
+    },
+    {
+      "key": "art_type",
+      "label": "Art Type",
       "type": "text"
     },
     {
@@ -115,21 +120,6 @@
       "type": "text"
     },
     {
-      "key": "knit_or_woven",
-      "label": "Knit or Woven",
-      "type": "text"
-    },
-    {
-      "key": "fabric_weave_type",
-      "label": "Fabric Weave Type",
-      "type": "text"
-    },
-    {
-      "key": "top_style",
-      "label": "Top Style",
-      "type": "text"
-    },
-    {
       "key": "fit_type",
       "label": "Fit Type",
       "type": "text"
@@ -140,18 +130,23 @@
       "type": "text"
     },
     {
-      "key": "occasion",
-      "label": "Occasion",
-      "type": "text"
-    },
-    {
       "key": "season",
       "label": "Season",
       "type": "text"
     },
     {
-      "key": "fashion_type",
-      "label": "Fashion Type",
+      "key": "occasion",
+      "label": "Occasion",
+      "type": "text"
+    },
+    {
+      "key": "hemline",
+      "label": "Hemline",
+      "type": "text"
+    },
+    {
+      "key": "fashion_types",
+      "label": "Fashion Types",
       "type": "text"
     },
     {
@@ -185,18 +180,13 @@
       "type": "text"
     },
     {
-      "key": "hemline",
-      "label": "Hemline",
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
       "type": "text"
     },
     {
       "key": "pattern_type",
       "label": "Pattern Type",
-      "type": "text"
-    },
-    {
-      "key": "detailing_surface",
-      "label": "Detailing Surface",
       "type": "text"
     },
     {
@@ -215,13 +205,23 @@
       "type": "text"
     },
     {
+      "key": "blouse_length",
+      "label": "Blouse Length",
+      "type": "text"
+    },
+    {
+      "key": "knit_or_woven",
+      "label": "Knit or Woven",
+      "type": "text"
+    },
+    {
       "key": "stretchable",
       "label": "Stretchable",
       "type": "text"
     },
     {
-      "key": "is_returnable",
-      "label": "Is Returnable",
+      "key": "returnable",
+      "label": "Returnable",
       "type": "text"
     },
     {
@@ -264,28 +264,18 @@
       "type": "image"
     },
     {
-      "key": "brand_size",
-      "label": "Brand Size",
+      "key": "saree_length_(mtr)",
+      "label": "Saree Length (Mtr)",
       "type": "text"
     },
     {
-      "key": "size_-_chest_bust",
-      "label": "Size - Chest/Bust",
+      "key": "blouse_length_(mtr)",
+      "label": "Blouse Length (Mtr)",
       "type": "text"
     },
     {
-      "key": "across_shoulder",
-      "label": "Across Shoulder",
-      "type": "text"
-    },
-    {
-      "key": "front_length_(inches)",
-      "label": "Front Length (Inches)",
-      "type": "text"
-    },
-    {
-      "key": "sleeve_length_(inches)",
-      "label": "Sleeve Length (inches)",
+      "key": "saree_width_(mtr)",
+      "label": "Saree Width (Mtr)",
       "type": "text"
     }
   ]

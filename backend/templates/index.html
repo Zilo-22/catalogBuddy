@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Catalog Transform MVP</title>
-  <link rel="stylesheet" href="/static/styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog Buddy</title>
+    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Catalog Buddy</h1>
 
-</head>
-<body>
-  <div class="container">
-    <h1>Catalog Buddy</h1>
-  
-    <!-- 1) Upload Shopify CSV -->
-    <section class="card">
-      <h2>1) Upload Shopify CSV</h2>
-  
-      <div id="uploadBox" class="upload-box" aria-label="Upload Shopify CSV">
-        <!-- keep this exact id for JS -->
-        <input type="file" id="csvFile" accept=".csv" />
-        <label for="csvFile" class="upload-cta">
-          <span class="upload-icon" aria-hidden="true"></span>
-          <div class="upload-text">
-            <strong>Select CSV</strong>
-            <small>or drag & drop here (max ~20 MB)</small>
-          </div>
+      <!-- Upload CSV -->
+      <section>
+        <h2>1) Upload Shopify CSV</h2>
+        <input type="file" id="csvUpload" accept=".csv" />
+        <p id="fileName">No file selected</p>
+      </section>
+
+      <!-- Select Template -->
+      <section>
+        <h2>2) Select Template</h2>
+        <select id="templateSelect">
+          <option value="">-- Select Template --</option>
+        </select>
+        <button id="mapButton">Load fields</button>
+      </section>
+
+      <!-- Mapping UI -->
+      <section>
+        <h2>Map Medusa attributes with matching Shopify fields.</h2>
+        <div id="mappingContainer"></div>
+      </section>
+
+      <!-- Transform -->
+      <section>
+        <h2>Transform & Download</h2>
+        <label>
+          <input type="checkbox" id="textCleanup" />
+          Apply text cleanup
         </label>
-  
-        <div id="fileInfo" class="file-info">No file selected</div>
-      </div>
-    </section>
-  
-    <!-- 2) Select Zilo Template -->
-    <section class="card">
-      <h2>2) Select Template</h2>
-  
-      <div class="template-select">
-        <select id="templateSelect" aria-label="Select Zilo template"></select>
-        <button id="loadTemplateBtn" disabled>Load fields</button>
-      </div>
-    </section>
-  
-    <!-- 3) Mapping -->
-    <section class="card">
-      <h2>Map Medusa attributes with matching Shopify fields.</h2>
-  
-      <div id="mappingArea"></div>
-  
-      <div class="cleanup">
-        <h3>Text Cleanup (applies mojibake fix, entity decode, strip tags, whitespace)</h3>
-        <div id="cleanupList"></div>
-        <button id="addCleanupBtn">Add column</button>
-      </div>
-  
-      <div class="actions">
-        <button id="saveDefaultBtn">Save as default mapping</button>
-        <button id="transformBtn">Transform & Download</button>
-      </div>
-    </section>
-  </div>
-  
+        <button id="transformButton">Transform</button>
+      </section>
 
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <h3>Unmapped fields</h3>
-      <p>The following fields are unmapped and will be excluded from export:</p>
-      <ul id="unmappedList"></ul>
-      <div class="popup-actions">
-        <button id="goBackBtn">Go Back to Mapping</button>
-        <button id="proceedBtn">Proceed Anyway</button>
-      </div>
+      <pre id="log"></pre>
     </div>
-  </div>
-  <script src="/static/app.js" defer></script>
-  <script src="/static/papaparse.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-</body>
+
+    <!-- JS dependencies -->
+    <script src="/static/papaparse.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
 </html>

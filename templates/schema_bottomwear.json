@@ -1,6 +1,6 @@
 {
-  "templateKey": "bags_luggage",
-  "templateName": "Bags & Luggage",
+  "templateKey": "bottomwear",
+  "templateName": "Bottomwear",
   "exportRules": {
     "excludeUnmapped": true,
     "requiredFieldKey": "sku",
@@ -25,33 +25,28 @@
       "type": "text"
     },
     {
-      "key": "brand_name",
-      "label": "Brand Name",
+      "key": "product_handle",
+      "label": "Product Handle",
       "type": "text"
     },
     {
-      "key": "title",
-      "label": "Title",
+      "key": "product_brand",
+      "label": "Product Brand",
       "type": "text"
     },
     {
-      "key": "description",
-      "label": "Description",
+      "key": "product_title",
+      "label": "Product Title",
+      "type": "text"
+    },
+    {
+      "key": "product_description",
+      "label": "Product Description",
       "type": "text"
     },
     {
       "key": "article_type",
       "label": "Article Type",
-      "type": "text"
-    },
-    {
-      "key": "item_type",
-      "label": "Item Type",
-      "type": "text"
-    },
-    {
-      "key": "model_name_number",
-      "label": "Model Name / Number",
       "type": "text"
     },
     {
@@ -65,8 +60,8 @@
       "type": "text"
     },
     {
-      "key": "bag_size",
-      "label": "Bag Size",
+      "key": "size",
+      "label": "Size",
       "type": "text"
     },
     {
@@ -75,7 +70,7 @@
       "type": "text"
     },
     {
-      "key": "sku",
+      "key": "sku_code",
       "label": "SKU Code",
       "type": "text"
     },
@@ -110,53 +105,43 @@
       "type": "text"
     },
     {
-      "key": "material",
-      "label": "Material",
+      "key": "fabric",
+      "label": "Fabric",
       "type": "text"
     },
     {
-      "key": "inner_lining_material",
-      "label": "Inner Lining Material",
+      "key": "fabric_composition_in_%",
+      "label": "Fabric Composition in %",
       "type": "text"
     },
     {
-      "key": "water_resistant",
-      "label": "Water Resistant",
+      "key": "lining",
+      "label": "Lining",
       "type": "text"
     },
     {
-      "key": "handle_type",
-      "label": "Handle Type",
+      "key": "knit_or_woven",
+      "label": "Knit or Woven",
       "type": "text"
     },
     {
-      "key": "strap_type",
-      "label": "Strap Type",
+      "key": "fit_type",
+      "label": "Fit Type",
       "type": "text"
     },
     {
-      "key": "laptop_compartment_size",
-      "label": "Laptop Compartment Size",
+      "key": "pant_leg_shape",
+      "label": "Pant Leg Shape",
       "type": "text"
     },
     {
-      "key": "compartment_padding_details",
-      "label": "Compartment Padding Details",
+      "key": "waistband",
+      "label": "Waistband",
       "type": "text"
     },
     {
-      "key": "padded_shoulder_strap",
-      "label": "Padded Shoulder Strap",
-      "type": "text"
-    },
-    {
-      "key": "card_slot_counts",
-      "label": "Card Slot Counts",
-      "type": "text"
-    },
-    {
-      "key": "finish",
-      "label": "Finish",
+      "key": "waist_rise",
+      "label": "Waist Rise",
       "type": "text"
     },
     {
@@ -165,73 +150,33 @@
       "type": "text"
     },
     {
-      "key": "types_of_wheels",
-      "label": "Types of Wheels",
+      "key": "distressed",
+      "label": "Distressed",
       "type": "text"
     },
     {
-      "key": "volume_in_litres",
-      "label": "Volume in Litres",
+      "key": "fade",
+      "label": "Fade",
       "type": "text"
     },
     {
-      "key": "compartments_types",
-      "label": "Compartments Types",
+      "key": "hemline",
+      "label": "Hemline",
       "type": "text"
     },
     {
-      "key": "number_of_compartments",
-      "label": "Number of Compartments",
+      "key": "number_of_pockets",
+      "label": "Number of Pockets",
       "type": "text"
     },
     {
-      "key": "external_pocket",
-      "label": "External Pocket",
+      "key": "product_length",
+      "label": "Product Length",
       "type": "text"
     },
     {
-      "key": "internal_pocket",
-      "label": "Internal Pocket",
-      "type": "text"
-    },
-    {
-      "key": "expandable",
-      "label": "Expandable",
-      "type": "text"
-    },
-    {
-      "key": "number_of_chains",
-      "label": "Number of Chains",
-      "type": "text"
-    },
-    {
-      "key": "pattern_type",
-      "label": "Pattern Type",
-      "type": "text"
-    },
-    {
-      "key": "warranty",
-      "label": "Warranty",
-      "type": "text"
-    },
-    {
-      "key": "care_instructions",
-      "label": "Care Instructions",
-      "type": "text"
-    },
-    {
-      "key": "is_returnable",
-      "label": "Is Returnable",
-      "type": "text"
-    },
-    {
-      "key": "usage",
-      "label": "Usage",
-      "type": "text"
-    },
-    {
-      "key": "season",
-      "label": "Season",
+      "key": "occasion",
+      "label": "Occasion",
       "type": "text"
     },
     {
@@ -240,8 +185,48 @@
       "type": "text"
     },
     {
-      "key": "additional_features",
-      "label": "Additional Features",
+      "key": "season",
+      "label": "Season",
+      "type": "text"
+    },
+    {
+      "key": "bottom_style",
+      "label": "Bottom Style",
+      "type": "text"
+    },
+    {
+      "key": "pattern_type",
+      "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
+      "type": "text"
+    },
+    {
+      "key": "lining",
+      "label": "Lining",
+      "type": "text"
+    },
+    {
+      "key": "transparency",
+      "label": "Transparency",
+      "type": "text"
+    },
+    {
+      "key": "wash_care",
+      "label": "Wash Care",
+      "type": "text"
+    },
+    {
+      "key": "stretchable",
+      "label": "Stretchable",
+      "type": "text"
+    },
+    {
+      "key": "is_returnable",
+      "label": "Is Returnable",
       "type": "text"
     },
     {
@@ -265,27 +250,57 @@
     {
       "key": "detail_angle",
       "label": "Detail Angle",
-      "type": "image",
-      "autoMap": "position=4"
+      "type": "text"
     },
     {
       "key": "look_shot_image",
       "label": "Look Shot Image",
-      "type": "text"
+      "type": "image"
     },
     {
       "key": "lifestyle_image",
       "label": "Lifestyle Image",
+      "type": "image",
+      "autoMap": "position=5"
+    },
+    {
+      "key": "size_chart_image",
+      "label": "Size Chart Image",
+      "type": "image"
+    },
+    {
+      "key": "brand_size",
+      "label": "Brand Size",
       "type": "text"
     },
     {
-      "key": "length_x_width_x_height_in_cm",
-      "label": "Length x Width x Height in cm",
+      "key": "waist_(body_measurement)",
+      "label": "Waist (Body Measurement)",
       "type": "text"
     },
     {
-      "key": "weight_in_gram_or_kg",
-      "label": "Weight in gram or kg",
+      "key": "front_length_(inches)",
+      "label": "Front Length (Inches)",
+      "type": "text"
+    },
+    {
+      "key": "thigh_(inches)",
+      "label": "Thigh (Inches)",
+      "type": "text"
+    },
+    {
+      "key": "hip_(body_measurement)",
+      "label": "Hip (Body Measurement)",
+      "type": "text"
+    },
+    {
+      "key": "inseam_length",
+      "label": "Inseam Length",
+      "type": "text"
+    },
+    {
+      "key": "outseam_length",
+      "label": "Outseam Length",
       "type": "text"
     }
   ]

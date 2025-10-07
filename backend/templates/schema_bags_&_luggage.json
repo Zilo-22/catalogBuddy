@@ -1,6 +1,6 @@
 {
-  "templateKey": "tops",
-  "templateName": "Tops",
+  "templateKey": "bags_&_luggage",
+  "templateName": "Bags & Luggage",
   "exportRules": {
     "excludeUnmapped": true,
     "requiredFieldKey": "sku",
@@ -50,6 +50,16 @@
       "type": "text"
     },
     {
+      "key": "item_type",
+      "label": "Item Type",
+      "type": "text"
+    },
+    {
+      "key": "model_name___number",
+      "label": "Model Name / Number",
+      "type": "text"
+    },
+    {
       "key": "number_of_items",
       "label": "Number of Items",
       "type": "text"
@@ -60,8 +70,8 @@
       "type": "text"
     },
     {
-      "key": "size",
-      "label": "Size",
+      "key": "bag_size",
+      "label": "Bag Size",
       "type": "text"
     },
     {
@@ -105,43 +115,123 @@
       "type": "text"
     },
     {
-      "key": "fabric",
-      "label": "Fabric",
+      "key": "material",
+      "label": "Material",
       "type": "text"
     },
     {
-      "key": "fabric_composition_in_%",
-      "label": "Fabric Composition in %",
+      "key": "inner_lining_material",
+      "label": "Inner Lining Material",
       "type": "text"
     },
     {
-      "key": "knit_or_woven",
-      "label": "Knit or Woven",
+      "key": "water_resistant",
+      "label": "Water Resistant",
       "type": "text"
     },
     {
-      "key": "fabric_weave_type",
-      "label": "Fabric Weave Type",
+      "key": "handle_type",
+      "label": "Handle Type",
       "type": "text"
     },
     {
-      "key": "top_style",
-      "label": "Top Style",
+      "key": "strap_type",
+      "label": "Strap Type",
       "type": "text"
     },
     {
-      "key": "fit_type",
-      "label": "Fit Type",
+      "key": "laptop_compartment_size",
+      "label": "Laptop Compartment Size",
       "type": "text"
     },
     {
-      "key": "product_length",
-      "label": "Product Length",
+      "key": "compartment_padding_details",
+      "label": "Compartment Padding Details",
       "type": "text"
     },
     {
-      "key": "occasion",
-      "label": "Occasion",
+      "key": "padded_shoulder_strap",
+      "label": "Padded Shoulder Strap",
+      "type": "text"
+    },
+    {
+      "key": "card_slot_counts",
+      "label": "Card Slot Counts",
+      "type": "text"
+    },
+    {
+      "key": "finish",
+      "label": "Finish",
+      "type": "text"
+    },
+    {
+      "key": "closure_type",
+      "label": "Closure Type",
+      "type": "text"
+    },
+    {
+      "key": "types_of_wheels",
+      "label": "Types of Wheels",
+      "type": "text"
+    },
+    {
+      "key": "volume_in_litres",
+      "label": "Volume in Litres",
+      "type": "text"
+    },
+    {
+      "key": "compartments_types",
+      "label": "Compartments Types",
+      "type": "text"
+    },
+    {
+      "key": "number_of_compartments",
+      "label": "Number of Compartments",
+      "type": "text"
+    },
+    {
+      "key": "external_pocket",
+      "label": "External Pocket",
+      "type": "text"
+    },
+    {
+      "key": "internal_pocket",
+      "label": "Internal Pocket",
+      "type": "text"
+    },
+    {
+      "key": "expandable",
+      "label": "Expandable",
+      "type": "text"
+    },
+    {
+      "key": "number_of_chains",
+      "label": "Number of Chains",
+      "type": "text"
+    },
+    {
+      "key": "pattern_type",
+      "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "warranty",
+      "label": "Warranty",
+      "type": "text"
+    },
+    {
+      "key": "care_instructions",
+      "label": "Care Instructions",
+      "type": "text"
+    },
+    {
+      "key": "is_returnable",
+      "label": "Is Returnable",
+      "type": "text"
+    },
+    {
+      "key": "usage",
+      "label": "Usage",
       "type": "text"
     },
     {
@@ -155,73 +245,8 @@
       "type": "text"
     },
     {
-      "key": "sleeve_length",
-      "label": "Sleeve Length",
-      "type": "text"
-    },
-    {
-      "key": "sleeve_style",
-      "label": "Sleeve Style",
-      "type": "text"
-    },
-    {
-      "key": "closure_type",
-      "label": "Closure Type",
-      "type": "text"
-    },
-    {
-      "key": "number_of_pockets",
-      "label": "Number of Pockets",
-      "type": "text"
-    },
-    {
-      "key": "collar_type",
-      "label": "Collar Type",
-      "type": "text"
-    },
-    {
-      "key": "neckline",
-      "label": "Neckline",
-      "type": "text"
-    },
-    {
-      "key": "hemline",
-      "label": "Hemline",
-      "type": "text"
-    },
-    {
-      "key": "pattern_type",
-      "label": "Pattern Type",
-      "type": "text"
-    },
-    {
-      "key": "detailing_surface",
-      "label": "Detailing Surface",
-      "type": "text"
-    },
-    {
-      "key": "lining",
-      "label": "Lining",
-      "type": "text"
-    },
-    {
-      "key": "transparency",
-      "label": "Transparency",
-      "type": "text"
-    },
-    {
-      "key": "wash_care",
-      "label": "Wash Care",
-      "type": "text"
-    },
-    {
-      "key": "stretchable",
-      "label": "Stretchable",
-      "type": "text"
-    },
-    {
-      "key": "is_returnable",
-      "label": "Is Returnable",
+      "key": "additional_features",
+      "label": "Additional Features",
       "type": "text"
     },
     {
@@ -259,33 +284,13 @@
       "autoMap": "position=5"
     },
     {
-      "key": "size_chart_image",
-      "label": "Size Chart Image",
-      "type": "image"
-    },
-    {
-      "key": "brand_size",
-      "label": "Brand Size",
+      "key": "length_x_width_x_height_in_cm",
+      "label": "Length x Width x Height in cm",
       "type": "text"
     },
     {
-      "key": "size_-_chest_bust",
-      "label": "Size - Chest/Bust",
-      "type": "text"
-    },
-    {
-      "key": "across_shoulder",
-      "label": "Across Shoulder",
-      "type": "text"
-    },
-    {
-      "key": "front_length_(inches)",
-      "label": "Front Length (Inches)",
-      "type": "text"
-    },
-    {
-      "key": "sleeve_length_(inches)",
-      "label": "Sleeve Length (inches)",
+      "key": "weight_in_gram_or_kg",
+      "label": "Weight in gram or kg",
       "type": "text"
     }
   ]

@@ -25,18 +25,23 @@
       "type": "text"
     },
     {
-      "key": "brand_name",
-      "label": "Brand Name",
+      "key": "product_handle",
+      "label": "Product Handle",
       "type": "text"
     },
     {
-      "key": "title",
-      "label": "Title",
+      "key": "product_brand",
+      "label": "Product Brand",
       "type": "text"
     },
     {
-      "key": "description",
-      "label": "Description",
+      "key": "product_title",
+      "label": "Product Title",
+      "type": "text"
+    },
+    {
+      "key": "product_description",
+      "label": "Product Description",
       "type": "text"
     },
     {
@@ -65,7 +70,7 @@
       "type": "text"
     },
     {
-      "key": "sku",
+      "key": "sku_code",
       "label": "SKU Code",
       "type": "text"
     },
@@ -105,7 +110,7 @@
       "type": "text"
     },
     {
-      "key": "fabric_composition_in",
+      "key": "fabric_composition_in_%",
       "label": "Fabric Composition in %",
       "type": "text"
     },
@@ -200,6 +205,11 @@
       "type": "text"
     },
     {
+      "key": "lining",
+      "label": "Lining",
+      "type": "text"
+    },
+    {
       "key": "transparency",
       "label": "Transparency",
       "type": "text"
@@ -240,23 +250,23 @@
     {
       "key": "detail_angle",
       "label": "Detail Angle",
-      "type": "image",
-      "autoMap": "position=4"
+      "type": "text"
     },
     {
       "key": "look_shot_image",
       "label": "Look Shot Image",
-      "type": "text"
+      "type": "image"
     },
     {
       "key": "lifestyle_image",
       "label": "Lifestyle Image",
-      "type": "text"
+      "type": "image",
+      "autoMap": "position=5"
     },
     {
       "key": "size_chart_image",
       "label": "Size Chart Image",
-      "type": "text"
+      "type": "image"
     },
     {
       "key": "brand_size",
@@ -264,22 +274,22 @@
       "type": "text"
     },
     {
-      "key": "waist_body_measurement",
+      "key": "waist_(body_measurement)",
       "label": "Waist (Body Measurement)",
       "type": "text"
     },
     {
-      "key": "front_length_inches",
+      "key": "front_length_(inches)",
       "label": "Front Length (Inches)",
       "type": "text"
     },
     {
-      "key": "thigh_inches",
+      "key": "thigh_(inches)",
       "label": "Thigh (Inches)",
       "type": "text"
     },
     {
-      "key": "hip_body_measurement",
+      "key": "hip_(body_measurement)",
       "label": "Hip (Body Measurement)",
       "type": "text"
     },

@@ -3,18 +3,30 @@ import os
 import json
 import csv
 from typing import Dict, Any, List, Optional
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse, JSONResponse, HTMLResponse, FileResponse
+
 from fastapi import FastAPI, Request, UploadFile, File, Form, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+
 import pandas as pd
 from bs4 import BeautifulSoup
 from ftfy import fix_text
 import html
 
-# ---------- App Setup ----------
-app = FastAPI(title="Catalog Transform MVP")
+# --------------------------------------------------
+# Directory setup
+# --------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+MAPPINGS_STORE = os.path.join(BASE_DIR, "mappings_store.json")
+
+# --------------------------------------------------
+# App initialization
+# --------------------------------------------------
+app = FastAPI(title="Catalog Buddy")
 
 app.add_middleware(
     CORSMiddleware,
@@ -23,24 +35,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Directory Paths ---
-APP_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES_DIR = os.path.join(APP_DIR, "templates")
-STATIC_DIR = os.path.join(APP_DIR, "static")
-MAPPINGS_STORE = os.path.join(APP_DIR, "mappings_store.json")
-
-# --- Serve static + templates ---
+# Mount static and templates
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 templates = Jinja2Templates(directory=TEMPLATES_DIR)
 
-# --- Serve main index page ---
+# --------------------------------------------------
+# Homepage route
+# --------------------------------------------------
 @app.get("/", response_class=HTMLResponse)
 async def serve_index(request: Request):
     """Serve index.html as homepage."""
     return templates.TemplateResponse("index.html", {"request": request})
 
-
-# ---------- Constants ----------
+# --------------------------------------------------
+# Utility functions
+# --------------------------------------------------
 VARIANT_LEVEL_SHOPIFY_HEADERS = set([
     "Variant SKU", "Variant Price", "Variant Compare At Price", "Variant Barcode",
     "Variant Inventory Qty", "Variant Grams", "Variant Weight", "Variant Weight Unit",
@@ -50,11 +59,8 @@ VARIANT_LEVEL_SHOPIFY_HEADERS = set([
     "Cost per item", "Inventory Policy", "Inventory Qty", "Inventory Item ID", "Inventory Tracker"
 ])
 
-
-# ---------- Utility Functions ----------
-
 def read_templates() -> Dict[str, Any]:
-    """Read all JSON templates from /templates folder."""
+    """Load all JSON schema templates."""
     result = {}
     for fname in os.listdir(TEMPLATES_DIR):
         if fname.endswith(".json"):
@@ -62,7 +68,6 @@ def read_templates() -> Dict[str, Any]:
                 data = json.load(f)
                 result[data["templateKey"]] = data
     return result
-
 
 def load_mapping_store() -> Dict[str, Any]:
     if not os.path.exists(MAPPINGS_STORE):
@@ -73,11 +78,9 @@ def load_mapping_store() -> Dict[str, Any]:
         except Exception:
             return {}
 
-
 def save_mapping_store(store: Dict[str, Any]) -> None:
     with open(MAPPINGS_STORE, "w", encoding="utf-8") as f:
         json.dump(store, f, ensure_ascii=False, indent=2)
-
 
 def clean_text_value(val: Any) -> str:
     if val is None:
@@ -89,16 +92,13 @@ def clean_text_value(val: Any) -> str:
     s = " ".join(s.split())
     return s
 
-
 def normalize_headers(df: pd.DataFrame) -> pd.DataFrame:
-    """Ensure all DataFrame columns are strings and cleaned."""
     for col in df.columns:
-        df[col] = df[col].astype(str).fillna("").replace("nan", "")
+        df[col] = df[col].astype(str).fillna("")
+        df[col] = df[col].replace("nan", "")
     return df
 
-
 def get_col(df: pd.DataFrame, name: str) -> Optional[pd.Series]:
-    """Return column by name (case-insensitive)."""
     if name in df.columns:
         return df[name]
     lowered = {c.lower(): c for c in df.columns}
@@ -106,9 +106,7 @@ def get_col(df: pd.DataFrame, name: str) -> Optional[pd.Series]:
         return df[lowered[name.lower()]]
     return None
 
-
 def collect_images(df: pd.DataFrame) -> Dict[str, Dict[int, str]]:
-    """Group image URLs by handle and position."""
     images_by_handle: Dict[str, Dict[int, str]] = {}
     handle_col = get_col(df, "Handle")
     src_col = get_col(df, "Image Src")
@@ -132,10 +130,9 @@ def collect_images(df: pd.DataFrame) -> Dict[str, Dict[int, str]]:
             slot[pos] = url
     return images_by_handle
 
-
 def stream_csv(header: List[str], rows_iter):
     def iter_bytes():
-        yield b'\xef\xbb\xbf'  # UTF-8 BOM for Excel
+        yield b'\xef\xbb\xbf'
         buf = io.StringIO()
         writer = csv.writer(buf, lineterminator="\r\n")
         writer.writerow(header)
@@ -147,13 +144,14 @@ def stream_csv(header: List[str], rows_iter):
             buf.seek(0); buf.truncate(0)
     return StreamingResponse(iter_bytes(), media_type="text/csv; charset=utf-8")
 
-
-# ---------- API Routes ----------
+# --------------------------------------------------
+# Routes
+# --------------------------------------------------
 
 @app.get("/templates")
 def list_templates():
+    """Return list of available templates."""
     return {"templates": list(read_templates().values())}
-
 
 @app.get("/templates/{template_key}")
 def get_template(template_key: str):
@@ -162,12 +160,10 @@ def get_template(template_key: str):
         raise HTTPException(404, "Template not found")
     return tpls[template_key]
 
-
 @app.get("/mappings/{template_key}")
 def get_mapping(template_key: str):
     store = load_mapping_store()
     return store.get(template_key, {"mapping": {}, "textCleanup": {"columns": []}})
-
 
 @app.post("/mappings/{template_key}")
 async def save_mapping(
@@ -192,7 +188,6 @@ async def save_mapping(
     store[template_key] = {"mapping": mapping_obj, "textCleanup": {"columns": cleanup_cols}}
     save_mapping_store(store)
     return {"ok": True}
-
 
 @app.post("/transform")
 async def transform(
@@ -223,7 +218,7 @@ async def transform(
         except Exception:
             cleanup_cols = []
 
-    # Read CSV into DataFrame
+    # Read CSV
     content = await file.read()
     try:
         df = pd.read_csv(io.BytesIO(content), dtype=str, keep_default_na=False, na_filter=False, encoding="utf-8")
@@ -231,14 +226,13 @@ async def transform(
         df = pd.read_csv(io.BytesIO(content), dtype=str, keep_default_na=False, na_filter=False, encoding="utf-8-sig")
     df = normalize_headers(df)
 
-    # Text cleanup
+    # Cleanup text
     for col in cleanup_cols:
         col_ser = get_col(df, col)
         if col_ser is not None:
             df[col_ser.name] = df[col_ser.name].map(clean_text_value)
 
     images = collect_images(df)
-
     auto_image_fields = []
     mapped_fields: List[Dict[str, str]] = []
     label_by_key = {f["key"]: f["label"] for f in tpl["fields"]}
@@ -268,7 +262,9 @@ async def transform(
         elif any(ai[0] == k for ai in auto_image_fields):
             output_headers.append(f["label"])
 
-    handle_series = get_col(df, "Handle") or pd.Series(["__row__" + str(i) for i in range(len(df))])
+    handle_series = get_col(df, "Handle")
+    if handle_series is None:
+        handle_series = pd.Series(["__row__" + str(i) for i in range(len(df))])
 
     product_values: Dict[str, Dict[str, str]] = {}
     for mi in mapped_fields:
@@ -292,7 +288,6 @@ async def transform(
         for idx in range(len(df)):
             handle = handle_series.iloc[idx]
             out_row = []
-
             sku_src = next((mi["src"] for mi in mapped_fields if mi["key"] == required_key), None)
             sku_val = ""
             if sku_src:
@@ -311,18 +306,16 @@ async def transform(
                     if src_col is not None and src in VARIANT_LEVEL_SHOPIFY_HEADERS:
                         val = (src_col.iloc[idx] or "").strip()
                     else:
-                        if handle in product_values and k in product_values[handle]:
-                            val = product_values[handle][k]
-                        else:
-                            val = (src_col.iloc[idx] or "").strip() if src_col is not None else ""
+                        val = (
+                            product_values.get(handle, {}).get(k)
+                            or (src_col.iloc[idx] if src_col is not None else "")
+                        )
                     out_row.append(val)
                     continue
                 ai = next(((ak, pos, lab) for (ak, pos, lab) in auto_image_fields if ak == k), None)
                 if ai:
                     pos = ai[1]
-                    url = ""
-                    if handle in images and pos in images[handle]:
-                        url = images[handle][pos]
+                    url = images.get(handle, {}).get(pos, "")
                     out_row.append(url)
             yield out_row
 

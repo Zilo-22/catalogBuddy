@@ -1,6 +1,6 @@
 {
-  "templateKey": "sarees_blouse",
-  "templateName": "Sarees & Blouse",
+  "templateKey": "tops",
+  "templateName": "Tops",
   "exportRules": {
     "excludeUnmapped": true,
     "requiredFieldKey": "sku",
@@ -25,28 +25,28 @@
       "type": "text"
     },
     {
-      "key": "brand_name",
-      "label": "Brand Name",
+      "key": "product_handle",
+      "label": "Product Handle",
       "type": "text"
     },
     {
-      "key": "title",
-      "label": "Title",
+      "key": "product_brand",
+      "label": "Product Brand",
       "type": "text"
     },
     {
-      "key": "description",
-      "label": "Description",
+      "key": "product_title",
+      "label": "Product Title",
+      "type": "text"
+    },
+    {
+      "key": "product_description",
+      "label": "Product Description",
       "type": "text"
     },
     {
       "key": "article_type",
       "label": "Article Type",
-      "type": "text"
-    },
-    {
-      "key": "art_type",
-      "label": "Art Type",
       "type": "text"
     },
     {
@@ -70,7 +70,7 @@
       "type": "text"
     },
     {
-      "key": "sku",
+      "key": "sku_code",
       "label": "SKU Code",
       "type": "text"
     },
@@ -110,8 +110,23 @@
       "type": "text"
     },
     {
-      "key": "fabric_composition_in",
+      "key": "fabric_composition_in_%",
       "label": "Fabric Composition in %",
+      "type": "text"
+    },
+    {
+      "key": "knit_or_woven",
+      "label": "Knit or Woven",
+      "type": "text"
+    },
+    {
+      "key": "fabric_weave_type",
+      "label": "Fabric Weave Type",
+      "type": "text"
+    },
+    {
+      "key": "top_style",
+      "label": "Top Style",
       "type": "text"
     },
     {
@@ -125,23 +140,18 @@
       "type": "text"
     },
     {
-      "key": "season",
-      "label": "Season",
-      "type": "text"
-    },
-    {
       "key": "occasion",
       "label": "Occasion",
       "type": "text"
     },
     {
-      "key": "hemline",
-      "label": "Hemline",
+      "key": "season",
+      "label": "Season",
       "type": "text"
     },
     {
-      "key": "fashion_types",
-      "label": "Fashion Types",
+      "key": "fashion_type",
+      "label": "Fashion Type",
       "type": "text"
     },
     {
@@ -175,13 +185,18 @@
       "type": "text"
     },
     {
-      "key": "detailing_surface",
-      "label": "Detailing Surface",
+      "key": "hemline",
+      "label": "Hemline",
       "type": "text"
     },
     {
       "key": "pattern_type",
       "label": "Pattern Type",
+      "type": "text"
+    },
+    {
+      "key": "detailing_surface",
+      "label": "Detailing Surface",
       "type": "text"
     },
     {
@@ -200,23 +215,13 @@
       "type": "text"
     },
     {
-      "key": "blouse_length",
-      "label": "Blouse Length",
-      "type": "text"
-    },
-    {
-      "key": "knit_or_woven",
-      "label": "Knit or Woven",
-      "type": "text"
-    },
-    {
       "key": "stretchable",
       "label": "Stretchable",
       "type": "text"
     },
     {
-      "key": "returnable",
-      "label": "Returnable",
+      "key": "is_returnable",
+      "label": "Is Returnable",
       "type": "text"
     },
     {
@@ -240,37 +245,47 @@
     {
       "key": "detail_angle",
       "label": "Detail Angle",
-      "type": "image",
-      "autoMap": "position=4"
+      "type": "text"
     },
     {
       "key": "look_shot_image",
       "label": "Look Shot Image",
-      "type": "text"
+      "type": "image"
     },
     {
       "key": "lifestyle_image",
       "label": "Lifestyle Image",
-      "type": "text"
+      "type": "image",
+      "autoMap": "position=5"
     },
     {
       "key": "size_chart_image",
       "label": "Size Chart Image",
+      "type": "image"
+    },
+    {
+      "key": "brand_size",
+      "label": "Brand Size",
       "type": "text"
     },
     {
-      "key": "saree_length_mtr",
-      "label": "Saree Length (Mtr)",
+      "key": "size_-_chest_bust",
+      "label": "Size - Chest/Bust",
       "type": "text"
     },
     {
-      "key": "blouse_length_mtr",
-      "label": "Blouse Length (Mtr)",
+      "key": "across_shoulder",
+      "label": "Across Shoulder",
       "type": "text"
     },
     {
-      "key": "saree_width_mtr",
-      "label": "Saree Width (Mtr)",
+      "key": "front_length_(inches)",
+      "label": "Front Length (Inches)",
+      "type": "text"
+    },
+    {
+      "key": "sleeve_length_(inches)",
+      "label": "Sleeve Length (inches)",
       "type": "text"
     }
   ]
