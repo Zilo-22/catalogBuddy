@@ -4,3 +4,4 @@ beautifulsoup4==4.12.3
 ftfy==6.1.1
 python-multipart==0.0.9
 pandas==2.2.3
+jinja2==3.1.4
